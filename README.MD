@@ -13,14 +13,33 @@ The architecture consists of:
 
 Steps to establish a connection:
 
-1. A peer requests the server a ID. The ID is obtained through other channels i.e meeting them in person, or other social media platforms.
-2. The server sends the ID, and ways to communicate with the other peer.
+1. A peer requests the server a peer communication details using an ID. The ID is obtained through other channels i.e meeting them in person, or other social media platforms.
+2. The server sends the peer details needed to establish a communication.
 3. The peer then uses this information to connect and communicate with the recipiant.
 
 ## Future Design considiration
 
 - Currently signal does not hide IP address of peers or uses the central server to address this issue. It would be interesting to use a tor like system to gide the IP address.
 - Communication will only occur if two peers are active. This is an attempt to ensure secure communcation. Although possiblity of using End-to-Encrpytion like signal or other protocols will be investigated later.
+
+## Requirements 
+
+### Server
+
+| Requirement | Description | Complete |
+|----|-------------|----------|
+| Store peer details | The server should store the ID of the peers to be collected in the future|  |
+| Fetch details | Upon peer first running, it will send the server with an ID | |
+
+### Peer
+
+| Requirement | Description | Complete |
+|----|-------------|----------|
+|Create account| When first using the app, an account (with an ID) needs to be setup| |
+|Store details | peer information, like connection and id needs to be sent and stored to the server | |
+|Fetch peer details | When wanting to connect, use ID to obtain comm details| |
+|comms with peers | the peer needs to be able to establish, send and recive comms from other peers | | 
+|Check if peer is living | the peer should also keep checking if other peer is still active in the communication | | 
 
 
 
