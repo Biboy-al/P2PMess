@@ -25,20 +25,21 @@ Steps to establish a connection:
 ## Requirements 
 
 ### Server
-
+| Functional|
 | Requirement | Description | Complete |
 |----|-------------|----------|
 | Store peer details | The server should store the ID of the peers to be collected in the future|  |
 | Fetch details | Upon peer first running, it will send the server with an ID | |
 
 ### Peer
-
+| Functional|
 | Requirement | Description | Complete |
 |----|-------------|----------|
 |Create account| When first using the app, an account (with an ID) needs to be setup| |
 |Store details | peer information, like connection and id needs to be sent and stored to the server | |
 |Fetch peer details | When wanting to connect, use ID to obtain comm details| |
 |comms with peers | the peer needs to be able to establish, send and recive comms from other peers | | 
+| interface | Peer should have an interface to communicate with other peers | |
 |Check if peer is living | the peer should also keep checking if other peer is still active in the communication | | 
 
 
