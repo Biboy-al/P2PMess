@@ -2,12 +2,14 @@ import { Component, NgModule } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatButtonModule, MatSidenavModule],
+  standalone: true,
+  imports: [RouterOutlet, MatButtonModule, MatSidenavModule, MatIconModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'peer';

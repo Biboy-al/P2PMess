@@ -7,7 +7,7 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<style>
+<!-- <style>
   :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
     --electric-violet: oklch(53.18% 0.28 296.97);
@@ -175,17 +175,29 @@
       margin-block: 1.5rem;
     }
   }
-</style>
+</style> -->
 
 <main class="main">
-  <mat-sidenav-container>
+  <mat-sidenav-container class="container">
 
-    <mat-sidenav mode="side" opened>Start</mat-sidenav>
+    <mat-sidenav mode="side" opened class = "side-nav">
+    
+      <nav class="nav-items" >
+        <a mat-button routerLink="/">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+          Home
+        </a>
+        <a mat-button>
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="chat"></mat-icon>
+          Chat
+        </a>
 
+      </nav>
+    </mat-sidenav>
 
     <mat-sidenav-content>
-      <h2>HIII</h2>
-      <button mat-fab extended>start</button>
+      <router-outlet></router-outlet>
+ 
     </mat-sidenav-content>
   </mat-sidenav-container>
   
