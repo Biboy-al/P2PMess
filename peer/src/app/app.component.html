@@ -1,0 +1,25 @@
+<main class="main">
+  <mat-sidenav-container class="container">
+
+    <mat-sidenav mode="side" opened class = "side-nav">
+    
+      <nav class="nav-items" >
+        <a mat-button routerLink=""  routerLinkActive="active">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+          Home
+        </a>
+        <a mat-button routerLink="chat" routerLinkActive="active">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="chat"></mat-icon>
+          Chat
+        </a>
+
+      </nav>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet/>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+  
+</main>

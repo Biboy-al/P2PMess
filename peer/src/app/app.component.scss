@@ -1,0 +1,15 @@
+.container {
+    width: auto;
+    height: 100vh;
+  }
+
+.side-nav{
+   width: 10vw;
+}
+
+.nav-items{
+   display: flex;
+   flex-direction: column;
+   padding: 5px;
+   gap: 12px;
+}

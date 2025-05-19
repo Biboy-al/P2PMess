@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+
+$my-font-family : (
+    plain-family: Roboto,
+    bold-weight: 900,
+    medium-weight: 500,
+    regular-weight: 300,
+);
+
+:root {
+    // color-scheme: light dark;
+    @include mat.theme((
+      color: mat.$violet-palette,
+      typography: Roboto,
+      density: 0
+    ));
+    @include mat.sidenav-overrides((
+      container-background-color: purple,
+      container-text-color: black,
+    ));
+  }
+ 
+  body { margin: 0; padding: 0; }
