@@ -10,4 +10,12 @@ export class BackendService {
   connectPeer():Number{
     return Math.random();
   }
+
+  getConnectionDetails():ConnectionData{
+    return new ConnectionData();
+  }
+}
+
+class ConnectionData{
+  connectionId: Number = 0;
 }
