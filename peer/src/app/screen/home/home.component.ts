@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
+import { BackendService } from '../../service/backend.service';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +10,14 @@ import {MatCardModule} from '@angular/material/card';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
+
+  clientNum : Number = 0;
+
+  backend: BackendService = inject(BackendService);
+
+  constructor(){
+    this.clientNum = this .backend.connectPeer();
+  }
 
 }
